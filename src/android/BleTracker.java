@@ -37,8 +37,8 @@ public class BleTracker extends CordovaPlugin {
     private void add(JSONArray args, CallbackContext callback) {
         if (args != null) {
             try {
-                int a = Integer.parseInt(args.getJONObject.getString("param1"));
-                int b = Integer.parseInt(args.getJONObject.getString("param2"));
+                int a = Integer.parseInt(args.getJONObject(0).getString("param1"));
+                int b = Integer.parseInt(args.getJONObject(0).getString("param2"));
                 callback.success("" + (a + b));
             } catch (Exception ex) {
                 callback.error("Something went wrong" + ex);
@@ -51,8 +51,8 @@ public class BleTracker extends CordovaPlugin {
     private void sub(JSONArray args, CallbackContext callback) {
         if (args != null) {
             try {
-                int a = Integer.parseInt(args.getJONObject.getString("param1"));
-                int b = Integer.parseInt(args.getJONObject.getString("param2"));
+                int a = Integer.parseInt(args.getJONObject(0).getString("param1"));
+                int b = Integer.parseInt(args.getJONObject(0).getString("param2"));
                 callback.success("" + (a -b));
             } catch (Exception ex) {
                 callback.error("Something went wrong" + ex);
