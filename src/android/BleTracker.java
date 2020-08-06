@@ -1,4 +1,4 @@
-package cordova-plugin-bletracker;
+package cordova.plugin.bletracker;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
