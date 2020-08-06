@@ -16,10 +16,10 @@ public class BleTracker extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
        if (action.equals("add")) {
            
-            this.add(message, callbackContext);
+            this.add(args, callbackContext);
             return true;
         }else if (action.equals("sub")) {
-          this.sub(message, callbackContext);
+          this.sub(args, callbackContext);
           return true;
 
         }
